@@ -1,0 +1,36 @@
+[build-system]
+requires = ['setuptools >= 64.0', 'setuptools_scm >= 8']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'maidata-reader'
+description = 'A simple simai format reader.'
+requires-python = '>=3.8'
+authors = [{ name = 'Rei Hakurei' }]
+maintainers = [{ name = 'Rei Hakurei' }]
+readme = 'README.md'
+classifiers = [
+  'License :: OSI Approved :: BSD License',
+  'Intended Audience :: Developers',
+  'Operating System :: OS Independent',
+  'Programming Language :: Python :: 3',
+  'Programming Language :: Python :: 3 :: Only',
+  'Programming Language :: Python :: 3.8',
+  'Programming Language :: Python :: 3.9',
+  'Programming Language :: Python :: 3.10',
+  'Programming Language :: Python :: 3.11',
+  'Programming Language :: Python :: 3.12',
+  'Topic :: Software Defelopment :: Libraries',
+  'Topic :: Software Defelopment :: Libraries :: Python Modules',
+  'Topic :: Utilities',
+]
+dynamic = ['version', 'dependencies']
+
+[project.urls]
+Homepage = 'https://github.com/ReiFan49/py.maidata-reader'
+
+# [tool.setuptools.dynamic]
+# dependencies = { file = 'requirements.txt' }
+
+[tool.setuptools_scm]
+local_scheme = 'dirty-tag'
