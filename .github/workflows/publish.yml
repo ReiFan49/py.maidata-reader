@@ -1,0 +1,17 @@
+name: Publish to Github
+
+on:
+  push:
+    paths:
+    - '.github/workflows/publish.yml'
+    - 'stdeb.cfg'
+    - 'src/**/*.py'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    uses: ReiFan49/local-action-build/.github/workflows/upload-python-package.yml@master
